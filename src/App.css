@@ -1,0 +1,608 @@
+/* In index.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+/* Universal reset for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border do not affect width/height */
+}
+
+/* Body styles */
+body {
+  background-color: white; /* Default background color for light mode */
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* App container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0; /* Ensure no margin */
+  padding: 0; /* Ensure no padding */
+}
+
+/* Main content container */
+.content-container {
+  padding: 20px;
+  margin: 0;
+  background-color: transparent;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Flexbox container for coins */
+.coins-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between columns */
+  margin-top: 20px;
+  padding: 0; /* Remove padding */
+  overflow-y: auto; /* Enable vertical scrolling */
+  width: 100%;
+}
+
+/* Coin item container */
+.coin-item-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  background-color: white;
+  height: 60px;
+}
+
+/* Hover effect for coin item container */
+.coin-item-container:hover {
+  transform: scale(1.03); /* Scale up by 3% */
+}
+
+/* Selected coin item container */
+.coin-item-container.selected {
+  border-color: #ff5733; /* Change border color when selected */
+  border-width: 2px;
+}
+
+/* Dark mode styles */
+.dark-mode .coin-item-container.selected {
+  border-color: #ff5733; /* Change border color when selected */
+  border-width: 2px; /* Increase border thickness */
+}
+
+/* Coin columns */
+.column {
+  flex: 1; /* Equal width for both columns */
+  padding: 10px;
+  margin: 0; /* Remove margin */
+  border-radius: 5px; /* Rounded corners */
+  background-color: transparent; /* No fill color */
+}
+
+/* Coin column headings */
+.column h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Space between heading and items */
+}
+
+/* Card styling */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Graph container with box shadow */
+.graph-container {
+  padding: 20px;
+  border-radius: 10px;
+  border-width: 1px;
+  margin: 0;
+  position: relative;
+}
+
+/* Time period buttons */
+.time-button {
+  background-color: #ff5733;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+/* Time period buttons container - position them at the top right */
+.time-buttons-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 5px; /* Padding between buttons */
+}
+
+/* Active time period button */
+.time-button.active {
+  background-color: #e64a19;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode .app-container {
+  background-color: black;
+}
+
+.dark-mode .content-container {
+  background-color: black;
+}
+
+/* Page containers */
+.dark-mode .products-container,
+.dark-mode .community-container,
+.dark-mode .markets-container,
+.dark-mode .news-container,
+.dark-mode .card {
+  background-color: black;
+  color: white;
+}
+
+/* Sidebar pages */
+.dark-mode .page-content {
+  background-color: black;
+  color: white;
+}
+
+/* Nested containers */
+.dark-mode .inner-container {
+  background-color: black;
+}
+
+/* Keep the coin item containers with their specific background */
+.dark-mode .coin-item-container {
+  background-color: #333;
+  border: 1px solid #555;
+}
+
+.dark-mode .card {
+  background-color: black;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .time-button {
+  background-color: #444;
+  border: 1px solid #666;
+  color: white;
+}
+
+.dark-mode .time-button.active {
+  background-color: #666;
+}
+
+.dark-mode .dark-mode-toggle {
+  background-color: #444;
+  border: 1px solid #666;
+  color: white;
+  margin-left: auto; /* This will push the button to the right */
+}
+
+.dark-mode .dark-mode-toggle:hover {
+  background-color: #666;
+  border: 1px solid #888;
+  margin-left: auto; /* This will push the button to the right */
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  background-color: #ff5733;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 50;
+}
+
+.dark-mode .dark-mode-toggle {
+  background-color: #444;
+  border: 1px solid #666;
+  color: white;
+}
+
+.dark-mode .dark-mode-toggle:hover {
+  background-color: #666;
+  border: 1px solid #888;
+}
+
+/* Reset margins and paddings for button hover states */
+button:focus, button:active {
+  outline: none;
+}
+
+/* Trending coins container styled similarly to coins container */
+.trending-coins-container {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 3px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  height: 400px; /* Set same height as your coins container */
+  padding: 15px;
+  border-radius: 10px; /* Rounded corners */
+  border: 1px solid #ccc; /* Border outline */
+}
+
+/* Light Mode for trending coins container */
+.trending-coins-container {
+  background-color: white; /* White background for the container in light mode */
+  color: black; /* Black text color */
+  border-color: #ccc; /* Light border color */
+}
+
+/* Dark Mode for trending coins container */
+.dark-mode .trending-coins-container {
+  background-color: transparent; /* Dark background for the container */
+  color: white;
+  border-color: #555; /* Dark border color */
+}
+
+/* Trending coin item styles */
+.trending-coin-item {
+  flex-shrink: 0;
+  width: 100%; /* Take full width of the container */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  height:60px
+}
+
+/* Light Mode for trending coins container */
+.trending-coins-container {
+  background-color: white; /* White background for the container in light mode */
+  color: black; /* Black text color */
+}
+
+/* Light Mode styling for coin item titles */
+.trending-coin-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: black;
+}
+
+/* Light Mode styling for coin item descriptions */
+.trending-coin-item p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #333;
+}
+
+/* Dark Mode for trending coins container */
+.dark-mode .trending-coins-container {
+  background-color: #333; /* Dark background for the container */
+  color: white;
+}
+
+/* Trending coin item styles in dark mode */
+.dark-mode .trending-coin-item {
+  flex-shrink: 0;
+  width: 100%; /* Take full width of the container */
+  border: 1px solid #555;
+  border-radius: 8px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #333;
+}
+
+/* Dark Mode styling for coin item titles */
+.dark-mode .trending-coin-item h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* Dark Mode styling for coin item descriptions */
+.dark-mode .trending-coin-item p {
+  font-size: 1rem;
+  margin-top: 10px;
+  color: #ccc;
+}
+
+/* Graph and sentiment container */
+.graph-and-sentiment-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* Columns container */
+.columns-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+/* Graph and sentiment columns */
+.graph-column,
+.sentiment-column {
+  flex: 2; /* This ensures both columns take equal width */
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.graph-column {
+  min-width: 60%; /* Ensure the graph column takes more space */
+}
+
+.sentiment-column {
+  min-width: 40%; /* Sentiment column takes less space */
+}
+
+.card {
+  background-color: #fff; /* Adjust as per your design */
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.time-period-container {
+  margin-bottom: 20px;
+}
+
+.time-buttons-container {
+  display: flex;
+  gap: 5px;
+}
+
+/* Base time button styles */
+.time-button {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  color: black;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Active time button */
+.time-button.active {
+  background-color: #ff5733; /* Orange color */
+  color: white;
+}
+
+/* Dark mode styles */
+.dark-mode .time-button.active {
+  background-color: #ff5733; /* Keep orange active button color in dark mode */
+  color: white; /* Keep text white in dark mode */
+}
+
+
+/* Search container styling */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+/* Search input styling */
+.search-input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  background-color: white;
+  color: #1a202c;
+}
+
+/* Search button styling */
+.search-button {
+  padding: 10px 20px;
+  background-color: #ff5733;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #e64a19;
+}
+
+/* Search results styling */
+.search-results {
+  margin-top: 20px;
+}
+
+.search-results ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.search-results li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-coin-button {
+  padding: 5px 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-coin-button:hover {
+  background-color: #45a049;
+}
+
+/* Displaying added coins */
+.coins-container {
+  margin-top: 20px;
+}
+
+.coins-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.coins-container li {
+  padding: 10px;
+  background-color: #f4f4f4;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+/* Search bar container */
+.coin-search-container {
+  display: flex;
+  align-items: center;
+  max-width: 400px;
+  margin: 20px 0;
+  position: relative;
+}
+
+/* Search input styling */
+.search-input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  background-color: white;
+  color: #1a202c;
+}
+
+/* Focus styles */
+.search-input:focus {
+  outline: none;
+  border-color: black;  /* Light mode focus border */
+  box-shadow: 0 0 0 1px black;
+}
+
+/* Dark mode styles for search input */
+.dark-mode .search-input {
+  background-color: #1a1a1a;
+  border-color: #333;
+  color: white;
+}
+
+.dark-mode .search-input:focus {
+  border-color: white;  /* Dark mode focus border */
+  box-shadow: 0 0 0 1px white;
+}
+
+.dark-mode .search-input::placeholder {
+  color: #666;
+}
+
+/* Search icon styling */
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+  pointer-events: none;
+}
+
+.dark-mode .search-icon {
+  color: #666;
+}
+
+/* News card specific styles */
+.coin-item-container.news-card {
+  background-color: white;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Dark mode styles for news cards */
+.dark-mode .coin-item-container.news-card {
+  background-color: #333;
+  border: 1px solid #555;
+}
+
+/* Content area of news card */
+.coin-item-container.news-card .news-content {
+  background-color: white;
+}
+
+.dark-mode .coin-item-container.news-card .news-content {
+  background-color: #333;
+}
+
+.coin-item-container.news-card:hover {
+  transform: scale(1.03);
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 288px;
+  border-right: 1px solid;
+  z-index: 40;
+  transition: background-color 0.3s ease;
+}
+
+/* Main content wrapper */
+.main-content {
+  margin-left: 288px; /* Same as sidebar width */
+  width: calc(100% - 288px);
+  min-height: 100vh;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode .sidebar {
+  background-color: black;
+  border-color: #333;
+}
+
+.dark-mode .app-container {
+  background-color: black;
+}
+
+.dark-mode .content-container {
+  background-color: black;
+}

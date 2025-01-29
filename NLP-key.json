@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "civilinformation",
+  "private_key_id": "a5e73bd8eef3af63308eb0a1e5b95064ab81dc86",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCZnyDwH2HUMpAZ\nvW1yTv7+OEWnGmhlPv8ijzBs4CZwoTBAo/kLxRQ+9IdRBdBmgyOkMS+fAPOOYTyd\nJXP/K1GRTLhrQJT6PDCw46AsMUQm9Y49eJL1dBNQ+xVLLw3WJOEQSch2wiHwVfPH\nCZSy/qymczZrqYXlUaDHJnR4NeOH4E8WE0aYetIMC6C/PBSEK3Da47O9eedFh7rb\nCXPnG96X/UEw+ll/I6jlB31c5rtjNOmuuy5FHJVKyOK7xavKt7agVmhvoEFe4+x8\nb/18TTfTNIsRKlMU122t7x3kMRRtGwPKWQWi6ZBWQ6mwRpsoCrtGmE0A4Vwr71As\nV0HapQ3LAgMBAAECggEAHEoB8kYNKVrgT2UjNPQYH+9z4ChMRiy6Jf6RT9NdMMt2\nC8lGUOULa+ZyzrhP3rjShOdr2g9+Sl9cnqGpgTlUbXnf0hxT8trHqqNYORsfbj80\n4NwFz/5+miCKlMxG84LaETpNGJV6U3w4hpQclnOwjnxT7rKKjiaggVvzAboGutwJ\n9G1eJMZx2c+v4hfUaDZqeFDRbJifXb2Ve0eaFJipDlmgjPilretOmhPkrOH22CxP\n6Bl9aeDZ7z4uHX5aNXuvTJIqznPc59Wh6ZgW39TyGmBM22r20Sjvay6QUC2RevMp\nVbR3feU86BLKM21yTGxTSRjhtVi2VJUGOVe6hQ/wvQKBgQDTYfLsaEwziJDgMcg8\nJ+wq9rUyHztcoOxtxk7RFQweQCgHhHf59GFKvxzBgUdLP6p1AyuIhKL8Mu4gRuA8\n6L5spz5C5rIkMDGTgFoGd0fB/kWD/NgtrCdnGHf2bn8uuAgGhN5TxbDedZ384+Iw\nVzpmRnS+hem7tqYocB7bnuFjxQKBgQC6DBDFOOCToFPNZrblph9gZCC5UA4SiBPF\ndp8uAtg25etUnzcxnbkpRLebYEf/EGS6YtZOIHnbRf0dp63U3+sfsQwyNOei/C3M\nMbiOtca0ifi/nw2CSLySM0uolYwwbVTTfHHFVwRum10iRx+JSjLAn111os46MsGy\nquw37np0TwKBgE0S8dhxTxebO/gDLteAVwRzYC4eZS6pHowIOsTRv9Fn4zCahISH\nLtJqTLnhwXUWibiQp1bnxeXfTCRIs4qB8qz7biBGrb20NN9rdWfWJjv90qsFjm1Y\n0CUvLs6UC5ulTofR+p7g/lSe3jRPgzHNHGYeWoL9oPPo7TzhZN7/V39hAoGACl99\n1+Ex9EkuIvelHuzCNxeeE3b5MeNQZuQUP/Z8o6LyGge+hg+rMTfZnNojaX86foHg\nPP7mjGk8kZi1wnaxn1S5v1rfx2CUFRx4k8xixdIjgluV3zu699PQVhfwdwrBfgEk\nPsJ5Rsl2yeB5S6hNaBv6lAJ9yRTnY9TP0taDEVUCgYBMWZMTx0fUFqj9LMVh1VTa\nbF/1P8SgdYnU/WSREj8c5i3zp90CtA8QK/LNS7HJyfZXnEqS+4oSk7B499ZrvV12\nu9YYOg8TlUtm78wr4g2M27VtnMH5nyU/G40/L3sbp5qqEqOtGyNy3I95C/eECgyV\nlGsaQpnrZR9UbLti0EGZsg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "nlp-access@civilinformation.iam.gserviceaccount.com",
+  "client_id": "109439916344474131127",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nlp-access%40civilinformation.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
