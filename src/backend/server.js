@@ -1,4 +1,5 @@
-process.env.GOOGLE_APPLICATION_CREDENTIALS = '/Users/heather/bethelham/NLP-key.json';
+require('dotenv').config(); // Load .env variables
+
 
 const express = require('express');
 const axios = require('axios');
@@ -10,9 +11,10 @@ const app = express();
 const PORT = 5005;
 
 // API Keys
-const CMC_API_BASE_URL = 'https://pro-api.coinmarketcap.com/v1';
-const API_KEY = '74e13359-813e-47a5-b548-4106230b7881';
-const NEWS_API_KEY = 'c45374814b82420c864c8fedb0c00e6e'; // For fetching news articles
+const GOOGLE_APPLICATION_CREDENTIALS = process.env.GOOGLE_APPLICATION_CREDENTIALS;
+const CMC_BASE_URL = process.env.CMC_API_BASE_URL;
+const API_KEY = process.env.API_KEY
+const NEWS_API_KEY = process.env.NEWS_API_KEY// For fetching news articles
 
 // Store sentiment data
 let sentimentDataCache = {};

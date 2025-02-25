@@ -1,6 +1,7 @@
+
 import axios from 'axios';
 
-const baseURL = 'https://api.coingecko.com/api/v3';
+const baseURL = process.env.REACT_APP_COIN_GECKO_BASE_URL;
 
 // Function to get current prices for selected coins
 export const fetchCurrentPrices = async (coins) => {
